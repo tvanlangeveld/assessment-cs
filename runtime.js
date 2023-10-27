@@ -143,3 +143,24 @@ console.log("append", resultsAppend4.preciseWords);
 
 // problem 5.
 // Makes perfect sense why .unshift() would cause this to run longer vs .push(). From my understanding of .unshift it will insert data to the 0 index of the array. Which will then require the computer to move the data stored @ index zero to be moved to index 1 and the data stored at index 1 to be moved to index 2 and so on. Cause there to be a reaction to the data at every index of the array. Vs using the .push() method which will add the data piece to the end of the array regradless of the length. With requires the computer to create a new index at the end of the array, which cause for alot faster response from the computer.
+
+
+// 1) Sum Zero
+
+
+const sumZero = (arr) => {
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i] + arr[i +1] === 0){
+            return true
+        } else{
+            return false
+        }
+
+        }
+    }
+
+
+    sumZero([])
+    sumZero([1])
+    sumZero([1,2,3])
+    sumZero([1, 2, 3, -2])
